@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete</title>
+    <link rel="stylesheet" href="adm.css">
+</head>
+<body>
+    <h1>Cadastrados</h1>
+    <table border="2">
+        <thead>
+            <tr>
+                <td>Id:</td>
+                <td>Nome:</td>
+                <td>Sobrenome:</td>
+                <td>CPF:</td>
+                <td>Email:</td>
+                <td>Senha:</td>
+                <td>Rua:</td>
+                <td>CEP:</td>
+                <td>Cidade:</td>
+                <td>Estado:</td>
+                <td>Telefone:</td>
+                <td>Álbum1:</td>
+                <td>Álbum2:</td>
+                <td>Álbum3:</td>
+            </tr>
+        </thead>
+        <tbody id="tabela-corpo"></tbody>
+    </table>
+    
+    <h1>PUT (Atualizar)</h1>
+    <div class="input-row">
+        <div class="input-group">
+    <label>ID:</label>
+    <input type="text" id="identificador" disabled>
+    <br><br>
+        </div class="input-group">
+        <div>
+    <label>Nome:</label>
+    <input type="text" id="nomeAtualizar">
+    <br><br>
+        </div class="input-group">
+        <div>
+    <label>Sobrenome:</label>
+    <input type="text" id="sobrenomeAtualizar">
+    <br><br>
+</div class="input-group">
+<div>
+    <label>CPF:</label>
+    <input type="text" id="identificadorCPFput">
+    <br><br>
+</div class="input-group">
+<div>
+    <label>Email:</label>
+    <input type="email" id="emailAtualizar">
+    <br><br>
+</div class="input-group">
+<div>
+    <label>Senha:</label>
+    <input type="password" id="senhaAtualizar">
+    <br><br>
+</div class="input-group">
+<div>
+    <label>Rua:</label>
+    <input type="text" id="ruaAtualizar">
+    <br><br>
+</div class="input-group">
+<div>
+    <label>CEP:</label>
+    <input type="text" id="cepAtualizar">
+    <br><br>
+</div class="input-group">
+<div>   
+    <label>Cidade:</label>
+    <input type="text" id="cidadeAtualizar">
+    <br><br>
+</div class="input-group">
+<div>
+    <label>Estado:</label>
+    <input type="text" id="estadoAtualizar">
+    <br><br>
+</div class="input-group">
+<div>
+    <label>Telefone:</label>
+    <input type="text" id="telefoneAtualizar">
+    <br><br>
+</div class="input-group">
+<div>
+    <label>Idade:</label>
+    <input type="number" id="idadeAtualizar">
+    <br><br>
+</div class="input-group">
+<div>
+    <label for="estiloFavorito">Estilo Favorito:</label>
+    <select name="" id="estiloFavorito">
+        <option value="">-- Escolha Uma Opção --</option>
+        <option value="rock">ROCK</option>
+        <option value="pop">POP</option>
+        <option value="indie">INDIE</option>
+    </select>
+    <br><br>
+</div class="input-group">
+<div>
+<!-- Campo Álbum Favorito 1 -->
+<label for="albuns1">Álbum Favorito:</label>
+<select name="" id="albuns1">
+    <option value="">-- Escolha Um Estilo Favorito --</option>
+</select>
+<br><br>
+</div class="input-group">
+<div>
+<!-- Campo Álbum Favorito 2 -->
+<label for="albuns2">Álbum Favorito:</label>
+<select name="" id="albuns2">
+    <option value="">-- Escolha Um Estilo Favorito --</option>
+</select>
+<br><br>
+</div class="input-group">
+<div>
+<!-- Campo Álbum Favorito 3 -->
+<label for="albuns3">Álbum Favorito:</label>
+<select name="" id="albuns3">
+    <option value="">-- Escolha Um Estilo Favorito --</option>
+</select>
+<br><br>
+</div class="input-group">
+</div>
+<button onclick="buscarDados()">Buscar</button>
+<button onclick="atualizarDados()">Atualizar</button>
+
+
+    <h1>Delete (Deletar)</h1>
+<div>
+    <label>CPF:</label>
+    <input type="text" id="identificadorCPFdeleta">
+    <input type="button" onclick="deletarDados()" value="Deletar">
+    <script src="adm.js"></script>
+    <script src="put.js"></script>
+    <script src="get.js"></script>
+</div>
+<br><br>
+<button onclick="logout()">Logout</button>
+</body>
+</html>

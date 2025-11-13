@@ -1,0 +1,222 @@
+/* =====================================================
+   ALBUM.CSS — Tema escuro moderno estilo ADM.CSS
+   ===================================================== */
+
+/* --------------------------
+   RESET & BASE
+----------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  text-align: center;
+  background: #0f0f0f;
+  color: #f5f5f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px;
+  animation: backgroundPulse 10s infinite;
+}
+
+/* --------------------------
+   CABEÇALHO
+----------------------------- */
+h1 {
+  margin-top: 20px;
+  font-size: 2rem;
+  color: #00b4d8;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 15px rgba(0, 180, 216, 0.6);
+  animation: titlePulse 3s infinite;
+}
+
+/* --------------------------
+   CONTAINER DE ÁLBUNS
+----------------------------- */
+.album-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  width: 100%;
+  max-width: 1400px;
+  padding: 20px;
+}
+
+/* --------------------------
+   CARD DE ÁLBUM
+----------------------------- */
+.album {
+  width: 230px;
+  height: 230px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #1a1a1a;
+  box-shadow: 0 0 25px rgba(0,0,0,0.7);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid #00b4d8;
+}
+
+.album:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 35px rgba(0,180,216,0.8);
+}
+
+/* Imagem */
+.album img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85);
+  transition: all 0.4s ease;
+}
+
+.album:hover img {
+  filter: brightness(1);
+}
+
+/* Nome do álbum */
+.album-name {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  color: #90e0ef;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 10px;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0,180,216,0.6);
+  transition: background 0.3s;
+}
+
+.album:hover .album-name {
+  background: rgba(0,0,0,0.8);
+}
+
+/* --------------------------
+   BOTÕES
+----------------------------- */
+button {
+  width: 180px;
+  height: 55px;
+  margin-top: 40px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #0077b6, #00b4d8);
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0,180,216,0.4);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #00b4d8, #90e0ef);
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(0,180,216,0.8);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+/* --------------------------
+   ANIMAÇÕES LEVES
+----------------------------- */
+@keyframes titlePulse {
+  0% { text-shadow: 0 0 10px #00b4d8; }
+  50% { text-shadow: 0 0 25px #00b4d8; }
+  100% { text-shadow: 0 0 10px #00b4d8; }
+}
+
+@keyframes backgroundPulse {
+  0% { background-color: #0f0f0f; }
+  50% { background-color: #111; }
+  100% { background-color: #0f0f0f; }
+}
+
+/* --------------------------
+   SCROLLBAR PERSONALIZADA
+----------------------------- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00b4d8, #0077b6);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111;
+}
+
+/* --------------------------
+   RESPONSIVIDADE
+----------------------------- */
+@media (max-width: 1024px) {
+  .album {
+    width: 200px;
+    height: 200px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .album {
+    width: 160px;
+    height: 160px;
+  }
+
+  .album-name {
+    font-size: 0.9rem;
+  }
+
+  button {
+    width: 150px;
+    height: 45px;
+    font-size: 0.9rem;
+  }
+}
+
+/* --------------------------
+   EFEITO DE BRILHO
+----------------------------- */
+@keyframes glow {
+  0% { box-shadow: 0 0 10px #00b4d8; }
+  50% { box-shadow: 0 0 25px #00b4d8; }
+  100% { box-shadow: 0 0 10px #00b4d8; }
+}
+
+.album:hover {
+  animation: glow 1.5s infinite alternate;
+}
+
+/* --------------------------
+   TOQUE FINAL — LINHA SEPARADORA
+----------------------------- */
+hr {
+  border: none;
+  height: 2px;
+  width: 80%;
+  background: linear-gradient(90deg, #00b4d8, transparent);
+  margin: 40px auto;
+  border-radius: 2px;
+}

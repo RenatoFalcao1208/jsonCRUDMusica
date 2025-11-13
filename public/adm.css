@@ -1,0 +1,364 @@
+/* =====================================================
+   ADM.CSS — Tema escuro moderno com inputs em barrinha
+   ===================================================== */
+
+/* --------------------------
+   RESET & BASE GERAL
+----------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    background: #0f0f0f;
+    color: #f5f5f5;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* --------------------------
+   CONTAINERS E ESTRUTURA
+----------------------------- */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    gap: 40px;
+}
+
+/* Centraliza títulos e dá destaque */
+h1 {
+    font-size: 2rem;
+    color: #00b4d8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(0, 180, 216, 0.7);
+}
+
+/* --------------------------
+   TABELA DE CADASTRADOS
+----------------------------- */
+table {
+    border-collapse: collapse;
+    width: 90%;
+    max-width: 1400px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #1a1a1a;
+}
+
+thead {
+    background-color: #222;
+}
+
+thead td {
+    color: #00b4d8;
+    font-weight: bold;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 2px solid #00b4d8;
+}
+
+tbody tr {
+    transition: background 0.3s ease;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #151515;
+}
+
+tbody tr:hover {
+    background-color: #2b2b2b;
+    transform: scale(1.01);
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    color: #dcdcdc;
+    border-bottom: 1px solid #333;
+}
+
+/* --------------------------
+   FORMULÁRIOS DE EDIÇÃO (em linha)
+----------------------------- */
+
+/* Agrupa os inputs em uma faixa horizontal */
+form, body > label {
+    width: 100%;
+    max-width: 1400px;
+}
+
+/* Container flex para inputs */
+.input-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #111;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* Cada grupo label+input */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 180px;
+}
+
+/* Label estilizado */
+label {
+    font-size: 0.9rem;
+    color: #8ecae6;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+}
+
+/* Campos de entrada */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select {
+    width: 180px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 0.95rem;
+    color: #f5f5f5;
+    background-color: #222;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 0 8px rgba(255,255,255,0.05);
+}
+
+input:focus,
+select:focus {
+    background-color: #2b2b2b;
+    box-shadow: 0 0 10px #00b4d8;
+    transform: scale(1.05);
+}
+
+/* Campos desativados */
+input[disabled] {
+    background-color: #333;
+    color: #888;
+    cursor: not-allowed;
+}
+
+/* --------------------------
+   BOTÕES
+----------------------------- */
+button,
+input[type="button"] {
+    padding: 12px 25px;
+    font-size: 1rem;
+    color: #fff;
+    background: linear-gradient(90deg, #0077b6, #00b4d8);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0,180,216,0.4);
+}
+
+button:hover,
+input[type="button"]:hover {
+    background: linear-gradient(90deg, #00b4d8, #90e0ef);
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0,180,216,0.8);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* --------------------------
+   SEÇÕES SEPARADAS
+----------------------------- */
+h1:nth-of-type(2) {
+    color: #90e0ef;
+    text-shadow: 0 0 15px rgba(144,224,239,0.6);
+}
+
+h1:nth-of-type(3) {
+    color: #ef476f;
+    text-shadow: 0 0 15px rgba(239,71,111,0.6);
+}
+
+/* --------------------------
+   ANIMAÇÕES LEVES
+----------------------------- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+body > * {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+/* --------------------------
+   SCROLLBAR PERSONALIZADA
+----------------------------- */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #00b4d8, #0077b6);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111;
+}
+
+/* --------------------------
+   SOMBRAS & EFEITOS DE PROFUNDIDADE
+----------------------------- */
+input, select, button {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+table {
+    box-shadow: 0 4px 25px rgba(0,0,0,0.4);
+}
+
+/* --------------------------
+   EFEITOS ESPECIAIS
+----------------------------- */
+@keyframes glowing {
+    0% { box-shadow: 0 0 5px #00b4d8; }
+    50% { box-shadow: 0 0 20px #00b4d8; }
+    100% { box-shadow: 0 0 5px #00b4d8; }
+}
+
+button:hover {
+    animation: glowing 1.5s infinite alternate;
+}
+
+/* --------------------------
+   RESPONSIVIDADE
+----------------------------- */
+@media (max-width: 1024px) {
+    table {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .input-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-group {
+        width: 90%;
+        align-items: center;
+    }
+
+    input, select {
+        width: 90%;
+    }
+
+    button {
+        width: 80%;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .input-row {
+        gap: 10px;
+    }
+
+    input, select {
+        width: 100%;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+/* --------------------------
+   DETALHES VISUAIS EXTRA
+----------------------------- */
+thead tr {
+    border-bottom: 2px solid #00b4d8;
+}
+
+tbody td:first-child {
+    color: #90e0ef;
+    font-weight: bold;
+}
+
+td:hover {
+    color: #00b4d8;
+}
+
+/* --------------------------
+   ÁREA DE DELETE
+----------------------------- */
+#identificadorCPFdeleta {
+    width: 250px;
+    text-align: center;
+    background-color: #2b0000;
+    color: #ffb3b3;
+}
+
+input[value="Deletar"] {
+    background: linear-gradient(90deg, #ef233c, #d90429);
+    box-shadow: 0 0 15px rgba(239,35,60,0.5);
+}
+
+input[value="Deletar"]:hover {
+    background: linear-gradient(90deg, #ff4d6d, #ff758f);
+    box-shadow: 0 0 25px rgba(239,35,60,0.8);
+}
+
+/* --------------------------
+   ANIMAÇÃO DE TITULOS
+----------------------------- */
+@keyframes titlePulse {
+    0% { text-shadow: 0 0 10px #00b4d8; }
+    50% { text-shadow: 0 0 25px #00b4d8; }
+    100% { text-shadow: 0 0 10px #00b4d8; }
+}
+
+h1 {
+    animation: titlePulse 3s infinite;
+}
+
+/* --------------------------
+   FUNDO PULSANTE
+----------------------------- */
+@keyframes backgroundPulse {
+    0% { background-color: #0f0f0f; }
+    50% { background-color: #111; }
+    100% { background-color: #0f0f0f; }
+}
+
+body {
+    animation: backgroundPulse 10s infinite;
+}

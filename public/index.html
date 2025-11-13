@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Musicas</title>
+  <link rel="stylesheet" href="adm.css">
+</head>
+<body>
+  <center>
+    <h1>Preencha os campos para cadastrar-se</h1>
+    <form>
+      <!-- Campo Nome -->
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome">
+      <br><br>
+
+      <!-- Campo Sobrenome -->
+      <label for="sobrenome">Sobrenome:</label>
+      <input type="text" id="sobrenome">
+      <br><br>
+
+      <!-- Campo CPF -->
+      <label for="identificadorCPF">CPF:</label>
+      <input type="text" id="identificadorCPF" maxlength="14">
+      <br><br>
+
+      <!-- Campo Email -->
+      <label for="email">Email:</label>
+      <input type="email" id="email">
+      <br><br>
+
+      <!-- Campo Senha -->
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha">
+      <br><br>
+
+      <!-- Campo Rua -->
+      <label for="rua">Rua:</label>
+      <input type="text" id="rua">
+      <br><br>
+
+      <!-- Campo CEP -->
+      <label for="cep">CEP:</label>
+      <input type="text" id="cep" maxlength="9">
+      <br><br>
+
+      <!-- Campo Cidade -->
+      <label for="cidade">Cidade:</label>
+      <input type="text" id="cidade">
+      <br><br>
+
+      <!-- Campo Estado -->
+      <label for="estado">Estado:</label>
+      <input type="text" id="estado" maxlength="2">
+      <br><br>
+
+      <!-- Campo Telefone -->
+      <label for="telefone">Telefone:</label>
+      <input type="text" id="telefone">
+      <br><br>
+
+      <!-- Campo Idade -->
+      <label for="idade">Idade:</label>
+      <input type="number" id="idade">
+      <br><br>
+
+      <!-- Campo Estilo Favorito -->
+      <label for="estiloFavorito">Estilo Favorito:</label>
+      <select name="" id="estiloFavorito">
+        <option value="">-- Escolha Uma Opção --</option>
+        <option value="rock">ROCK</option>
+        <option value="pop">POP</option>
+        <option value="indie">INDIE</option>
+      </select>
+      <br><br>
+
+      <!-- Campo Álbum Favorito 1 -->
+      <label for="albuns1">Álbum Favorito:</label>
+      <select name="" id="albuns1">
+        <option value="">-- Escolha Um Estilo Favorito --</option>
+      </select>
+      <br><br>
+
+      <!-- Campo Álbum Favorito 2 -->
+      <label for="albuns2">Álbum Favorito:</label>
+      <select name="" id="albuns2">
+        <option value="">-- Escolha Um Estilo Favorito --</option>
+      </select>
+      <br><br>
+
+      <!-- Campo Álbum Favorito 3 -->
+      <label for="albuns3">Álbum Favorito:</label>
+      <select name="" id="albuns3">
+        <option value="">-- Escolha Um Estilo Favorito --</option>
+      </select>
+      <br><br>
+
+      <!-- Botão para Enviar os Dados -->
+      <button onclick="enviarDados()">Enviar</button>
+    </form>
+    <br>
+    <button onclick="login()">Página de Login</button>
+  </center>
+  <a href=""></a>
+  <script src="index.js"></script>
+</body>
+</html>
